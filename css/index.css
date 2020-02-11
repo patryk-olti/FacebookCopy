@@ -1,1 +1,41 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 10px;
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f5f6f7;
+}
+
+.wrapper .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5vh;
+  min-height: 3rem;
+  max-width: 1200px;
+  background-color: #4267b2;
+}
+
+.wrapper .nav form.input {
+  height: 2.6rem;
+  width: 20rem;
+}
+
+.wrapper .nav .fab, .wrapper .nav .fas {
+  font-size: 1.6rem;
+  color: #1a2947;
+}
+
+.wrapper .nav .fa-facebook-square {
+  color: #f5f6f7;
+}
+/*# sourceMappingURL=index.css.map */
