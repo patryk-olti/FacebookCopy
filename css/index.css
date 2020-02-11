@@ -8,9 +8,34 @@ body {
   margin: 0;
   min-height: 100vh;
   background-color: #f5f6f7;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.wrapper .nav {
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  background-color: #4267b2;
+}
+
+.wrapper nav .nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,22 +45,117 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 5vh;
-  min-height: 3rem;
-  max-width: 1200px;
-  background-color: #4267b2;
+  min-height: 2.6rem;
+  max-width: 1080px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-transform: translateX(-9%);
+          transform: translateX(-9%);
 }
 
-.wrapper .nav form.input {
-  height: 2.6rem;
-  width: 20rem;
+.wrapper nav .nav form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 1.5rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0 30px 0 3px;
 }
 
-.wrapper .nav .fab, .wrapper .nav .fas {
-  font-size: 1.6rem;
-  color: #1a2947;
+.wrapper nav .nav form input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 100%;
+  font-size: 1rem;
+  padding-left: 5px;
+  border: none;
 }
 
-.wrapper .nav .fa-facebook-square {
+.wrapper nav .nav form button {
+  z-index: 0;
+  border: none;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.wrapper nav .nav .btn {
+  height: 1.6rem;
+  line-height: 1.6rem;
+  padding: 0 5px;
+  border-right: 1px solid #3b5ca0;
+  border-radius: 10%;
+}
+
+.wrapper nav .nav .btn button {
+  border: none;
+  background-color: transparent;
   color: #f5f6f7;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.wrapper nav .nav .btn:hover {
+  background-color: #3b5ca0;
+}
+
+.wrapper nav .nav .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper nav .nav .profile img {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.wrapper nav .nav .fab, .wrapper nav .nav .fas {
+  font-size: 1.4rem;
+  color: #1a2947;
+  padding: 0 8px;
+}
+
+.wrapper nav .nav .fab:hover, .wrapper nav .nav .fas:hover {
+  color: #0d1524;
+  cursor: pointer;
+}
+
+.wrapper nav .nav .fa-search {
+  font-size: .9rem;
+  padding: 1px 10px;
+  opacity: .7;
+}
+
+.wrapper nav .nav .fa-facebook-square {
+  font-size: 1.6rem;
+  color: #f5f6f7;
+  margin-left: 5px;
+}
+
+.wrapper nav .nav .fa-facebook-square:hover {
+  color: #f5f6f7;
+  cursor: pointer;
+}
+
+.wrapper nav .nav .fa-bell {
+  margin-right: 8px;
+  padding-right: 10px;
+  border-right: 1px solid #3b5ca0;
 }
 /*# sourceMappingURL=index.css.map */
