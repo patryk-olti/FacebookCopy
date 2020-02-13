@@ -14,7 +14,7 @@ body{
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background-color: $lightBg;
+    background-color: $darkBg;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -143,10 +143,177 @@ body{
         margin-top: 20px;
 
         section.left{
-            height: 300px;
             width: 20vw;
-            border: 1px solid black;
+            margin-right: 10px;
+            .user{
+                padding: 5px;
+                display: flex;
+                height: 35px;
+                border-radius: 10%;
+
+                .img{
+                    width: 20px;
+                    height: 20px;
+                    background-image: url("../img/patrick.jpg");
+                    background-size: cover;
+                    border-radius: 50%;
+                    margin-top: 2.5px;
+                }
+
+                .span{
+                    font-size: 0.9rem;
+                    line-height: 25px;
+                    margin-left: 10px;
+                    margin-right: 60px;
+                }
+
+                .fas{
+                    font-size: 1rem;
+                    text-align: right;
+                    line-height: 25px;
+                    color: #888;
+                    opacity: 0;
+                }
+            }
+
+            .user:hover{
+                cursor: pointer;
+                background-color: $lightBg;
+            }
+            .user:hover .fas{
+                opacity: 1;
+            }
+
+            .userNav{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin-top: 10px;
+
+                .news{
+                    display: flex;
+                    align-items: center;
+                    font-size: .8rem;
+                    padding: 5px;
+                    width: 100%;
+                    margin-top: 1px;
+
+                    .fas, .fab{
+                        font-size: 1.2rem;
+                        color: $lightBlue
+                    }
+    
+                    .fa-ellipsis-h{
+                        font-size: 1rem;
+                        text-align: right;
+                        line-height: 25px;
+                        margin-right: 10px;
+                        color: #888;
+                        opacity: 1;
+                    }
+
+                    .fa-home{
+                        color: #2b7945;
+                    }
+
+                    .fa-circle{
+                        font-size: .5rem;
+                        color: #f32f2f;
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            .news:hover{
+                cursor: pointer;
+                background-color: $lightBg;
+            }
+
+            .shortCut{
+                .short{
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0 15px -10px 5px;
+                    .one{
+                        font-size: .9rem;
+                        color: #666666;
+                        font-weight: bold;
+                    }
+
+                    .two{
+                        font-size: .9rem;
+                        color: #2b2bb8;
+                        opacity: 0;
+                    }
+
+                    .two:hover{
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+
+                .news{
+                    display: flex;
+                    align-items: center;
+                    font-size: .8rem;
+                    padding: 5px;
+                    width: 100%;
+                    margin-top: 1px;
+
+                    .fas, .fab{
+                        font-size: 1.2rem;
+                        color: $lightBlue
+                    }
+    
+                    .fa-ellipsis-h{
+                        font-size: 1rem;
+                        text-align: right;
+                        line-height: 25px;
+                        margin-right: 10px;
+                        color: #888;
+                        opacity: 0;
+                    }
+
+                    .fa-flag{
+                        color: #e4881f;
+                    }
+                }
+
+                .news:hover{
+                    cursor: pointer;
+                    background-color: $lightBg;}
+
+                .news:hover .fa-ellipsis-h{opacity: 1;}
+            }
+
+            .shortCut:hover .two{opacity: 1;}
+
+            .more{
+                display: flex;
+                align-items: center;
+                padding: 0 5px;
+                margin-top: -10px;
+
+                .fa-caret-down{
+                    font-size: 1rem;
+                    color: #999999;
+                }
+
+                p{
+                    font-size: .8rem;
+                    margin-left: 10px;
+                    color: $lightBlue
+                }
+            }
+
+            .more:hover p{
+                text-decoration: underline;
+            }
+
+            .more:hover{cursor: pointer;}
         }
+
+
 
         section.center{
             height: 100vh;

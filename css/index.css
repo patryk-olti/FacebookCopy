@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background-color: #f5f6f7;
+  background-color: #e9ebee;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -177,9 +177,206 @@ body {
 }
 
 .wrapper .content section.left {
-  height: 300px;
   width: 20vw;
-  border: 1px solid black;
+  margin-right: 10px;
+}
+
+.wrapper .content section.left .user {
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 35px;
+  border-radius: 10%;
+}
+
+.wrapper .content section.left .user .img {
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/patrick.jpg");
+  background-size: cover;
+  border-radius: 50%;
+  margin-top: 2.5px;
+}
+
+.wrapper .content section.left .user .span {
+  font-size: 0.9rem;
+  line-height: 25px;
+  margin-left: 10px;
+  margin-right: 60px;
+}
+
+.wrapper .content section.left .user .fas {
+  font-size: 1rem;
+  text-align: right;
+  line-height: 25px;
+  color: #888;
+  opacity: 0;
+}
+
+.wrapper .content section.left .user:hover {
+  cursor: pointer;
+  background-color: #f5f6f7;
+}
+
+.wrapper .content section.left .user:hover .fas {
+  opacity: 1;
+}
+
+.wrapper .content section.left .userNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.wrapper .content section.left .userNav .news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: .8rem;
+  padding: 5px;
+  width: 100%;
+  margin-top: 1px;
+}
+
+.wrapper .content section.left .userNav .news .fas, .wrapper .content section.left .userNav .news .fab {
+  font-size: 1.2rem;
+  color: #4267b2;
+}
+
+.wrapper .content section.left .userNav .news .fa-ellipsis-h {
+  font-size: 1rem;
+  text-align: right;
+  line-height: 25px;
+  margin-right: 10px;
+  color: #888;
+  opacity: 1;
+}
+
+.wrapper .content section.left .userNav .news .fa-home {
+  color: #2b7945;
+}
+
+.wrapper .content section.left .userNav .news .fa-circle {
+  font-size: .5rem;
+  color: #f32f2f;
+  margin-right: 10px;
+}
+
+.wrapper .content section.left .news:hover {
+  cursor: pointer;
+  background-color: #f5f6f7;
+}
+
+.wrapper .content section.left .shortCut .short {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 15px -10px 5px;
+}
+
+.wrapper .content section.left .shortCut .short .one {
+  font-size: .9rem;
+  color: #666666;
+  font-weight: bold;
+}
+
+.wrapper .content section.left .shortCut .short .two {
+  font-size: .9rem;
+  color: #2b2bb8;
+  opacity: 0;
+}
+
+.wrapper .content section.left .shortCut .short .two:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.wrapper .content section.left .shortCut .news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: .8rem;
+  padding: 5px;
+  width: 100%;
+  margin-top: 1px;
+}
+
+.wrapper .content section.left .shortCut .news .fas, .wrapper .content section.left .shortCut .news .fab {
+  font-size: 1.2rem;
+  color: #4267b2;
+}
+
+.wrapper .content section.left .shortCut .news .fa-ellipsis-h {
+  font-size: 1rem;
+  text-align: right;
+  line-height: 25px;
+  margin-right: 10px;
+  color: #888;
+  opacity: 0;
+}
+
+.wrapper .content section.left .shortCut .news .fa-flag {
+  color: #e4881f;
+}
+
+.wrapper .content section.left .shortCut .news:hover {
+  cursor: pointer;
+  background-color: #f5f6f7;
+}
+
+.wrapper .content section.left .shortCut .news:hover .fa-ellipsis-h {
+  opacity: 1;
+}
+
+.wrapper .content section.left .shortCut:hover .two {
+  opacity: 1;
+}
+
+.wrapper .content section.left .more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5px;
+  margin-top: -10px;
+}
+
+.wrapper .content section.left .more .fa-caret-down {
+  font-size: 1rem;
+  color: #999999;
+}
+
+.wrapper .content section.left .more p {
+  font-size: .8rem;
+  margin-left: 10px;
+  color: #4267b2;
+}
+
+.wrapper .content section.left .more:hover p {
+  text-decoration: underline;
+}
+
+.wrapper .content section.left .more:hover {
+  cursor: pointer;
 }
 
 .wrapper .content section.center {
