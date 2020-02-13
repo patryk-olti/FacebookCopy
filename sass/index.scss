@@ -4,6 +4,7 @@ $darkBg: #e9ebee;
 $lightBg: #f5f6f7;
 $lightIcon: #1a2947;
 $darkIcon: #0d1524;
+$fontColorGray: #333333;
 
 *, *::after, *::before{
     box-sizing: border-box;
@@ -308,15 +309,176 @@ body{
 
 
         section.center{
+            
             height: 100vh;
             width: 50vw;
-            border: 1px solid black;
+            //border: 1px solid black;
+
+            .whatsUp{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100%;
+                background-color: #ffffff;
+                border-radius: 2%;
+
+                .createPost{
+                    width: 100%;
+                    padding: 8px 5px;
+                    font-size: .8rem;
+                    color: $fontColorGray;
+                    line-height: 15px;
+                    background-color: $lightBg;
+                }
+
+                .messageBox{
+                    display: flex;
+                    width: 100%;
+                    height: 80px;
+                    align-items: center;
+                    background-color: white;
+                    .img{
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        margin: 10px 20px 10px 10px;
+                        background-image: url("../img/patrick.jpg");
+                        background-size: cover;
+                        border-radius: 50%;
+                    }
+                    input{
+                        flex-grow: 1;
+                        height: 50px;
+                        font-size: .8rem;
+                        border: none;
+                    }
+                }
+
+                .buttonsBox{
+                    display: flex;
+                    justify-content: space-around;
+                    width: 90%;
+                    padding: 10px 0;
+                    background-color: #ffffff;
+                    border-top: 1px solid #DDDDDD;
+                    
+                    button{
+                        flex-grow: 1;
+                        margin: 0 5px;
+                        padding: 5px;
+                        font-size: .8rem;
+                        border-radius: 20%;
+                        border: none;
+                        color: #444444;
+                        font-weight: bold;
+
+                        .iconLeft{
+                            line-height: 100%;
+                            font-size: 1.4rem;
+                            width: 30px;
+                        }
+                        .fa-image{color: rgb(43, 192, 43);}
+                        .fa-user{color: rgb(35, 96, 211);}
+                        .fa-grin{color: rgb(175, 153, 25);}
+                        .fa-ellipsis-h{color: rgb(158, 153, 127);}
+                    }
+
+                    button:hover{
+                        cursor: pointer;
+                        background-color: $darkBg;
+                    }
+
+                }
+
+            }
+
+            .relations{
+                margin-top: 10px;
+                padding: 0 15px;
+                background-color: #ffffff;
+                
+                .title{
+                    display: flex;
+                    justify-content: space-between;
+
+                    p{
+                        font-size: .9rem;
+                        color: $fontColorGray;
+                    }
+
+                    .two{
+                        font-size: .8rem;
+                        color: $lightBlue;
+                    }
+
+                    p:hover{
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                }
+
+                .photos{
+                    display: flex;
+                    justify-content: space-between;
+                    padding-bottom: 15px;
+                    .photo{
+                        position: relative;
+                        width: 24%;
+                        height: 200px;
+                        border-radius: 5%;
+
+                        .circle{
+                            position: absolute;
+                            top: 5%;
+                            left: 10%;
+                            height: 35px;
+                            width: 35px;
+                            border-radius: 50%;
+                            background-color: #ffffff;
+
+                            .fas{
+                                font-size: 1.7rem;
+                                line-height: 35px;
+                                margin-left: 6px;
+                                color: royalblue;
+                            }
+                        }
+
+                        .border{
+                            border: 4px solid royalblue;
+                        }
+
+                    }
+
+                    .photo:nth-child(1){background-color: rgb(69, 212, 69);}
+                    .photo:nth-child(2){background-color: rgb(194, 13, 7);}
+                    .photo:nth-child(3){background-color: rgb(155, 75, 121);}
+                    .photo:nth-child(4){background-color: rgb(7, 51, 16);}
+
+                    .photo::before{
+                        content: "";
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                        background-color: rgba(0, 0, 0, 0.4);
+                        opacity: 0;
+                        transition: .5s;
+                    }
+
+                    .photo:hover{cursor: pointer;}
+
+                    .photo:hover::before{
+                        opacity: 1;
+                    }
+                }
+            }
+
         }
 
         section.right{
             height: 200px;
             width: 30vw;
-            border: 1px solid black;
+            //border: 1px solid black;
         }
     }
 

@@ -401,12 +401,222 @@ body {
 .wrapper .content section.center {
   height: 100vh;
   width: 50vw;
-  border: 1px solid black;
+}
+
+.wrapper .content section.center .whatsUp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 2%;
+}
+
+.wrapper .content section.center .whatsUp .createPost {
+  width: 100%;
+  padding: 8px 5px;
+  font-size: .8rem;
+  color: #333333;
+  line-height: 15px;
+  background-color: #f5f6f7;
+}
+
+.wrapper .content section.center .whatsUp .messageBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+}
+
+.wrapper .content section.center .whatsUp .messageBox .img {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin: 10px 20px 10px 10px;
+  background-image: url("../img/patrick.jpg");
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.wrapper .content section.center .whatsUp .messageBox input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 50px;
+  font-size: .8rem;
+  border: none;
+}
+
+.wrapper .content section.center .whatsUp .buttonsBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 90%;
+  padding: 10px 0;
+  background-color: #ffffff;
+  border-top: 1px solid #DDDDDD;
+}
+
+.wrapper .content section.center .whatsUp .buttonsBox button {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0 5px;
+  padding: 5px;
+  font-size: .8rem;
+  border-radius: 20%;
+  border: none;
+  color: #444444;
+  font-weight: bold;
+}
+
+.wrapper .content section.center .whatsUp .buttonsBox button .iconLeft {
+  line-height: 100%;
+  font-size: 1.4rem;
+  width: 30px;
+}
+
+.wrapper .content section.center .whatsUp .buttonsBox button .fa-image {
+  color: #2bc02b;
+}
+
+.wrapper .content section.center .whatsUp .buttonsBox button .fa-user {
+  color: #2360d3;
+}
+
+.wrapper .content section.center .whatsUp .buttonsBox button .fa-grin {
+  color: #af9919;
+}
+
+.wrapper .content section.center .whatsUp .buttonsBox button .fa-ellipsis-h {
+  color: #9e997f;
+}
+
+.wrapper .content section.center .whatsUp .buttonsBox button:hover {
+  cursor: pointer;
+  background-color: #e9ebee;
+}
+
+.wrapper .content section.center .relations {
+  margin-top: 10px;
+  padding: 0 15px;
+  background-color: #ffffff;
+}
+
+.wrapper .content section.center .relations .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper .content section.center .relations .title p {
+  font-size: .9rem;
+  color: #333333;
+}
+
+.wrapper .content section.center .relations .title .two {
+  font-size: .8rem;
+  color: #4267b2;
+}
+
+.wrapper .content section.center .relations .title p:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.wrapper .content section.center .relations .photos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 15px;
+}
+
+.wrapper .content section.center .relations .photos .photo {
+  position: relative;
+  width: 24%;
+  height: 200px;
+  border-radius: 5%;
+}
+
+.wrapper .content section.center .relations .photos .photo .circle {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.wrapper .content section.center .relations .photos .photo .circle .fas {
+  font-size: 1.7rem;
+  line-height: 35px;
+  margin-left: 6px;
+  color: royalblue;
+}
+
+.wrapper .content section.center .relations .photos .photo .border {
+  border: 4px solid royalblue;
+}
+
+.wrapper .content section.center .relations .photos .photo:nth-child(1) {
+  background-color: #45d445;
+}
+
+.wrapper .content section.center .relations .photos .photo:nth-child(2) {
+  background-color: #c20d07;
+}
+
+.wrapper .content section.center .relations .photos .photo:nth-child(3) {
+  background-color: #9b4b79;
+}
+
+.wrapper .content section.center .relations .photos .photo:nth-child(4) {
+  background-color: #073310;
+}
+
+.wrapper .content section.center .relations .photos .photo::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.wrapper .content section.center .relations .photos .photo:hover {
+  cursor: pointer;
+}
+
+.wrapper .content section.center .relations .photos .photo:hover::before {
+  opacity: 1;
 }
 
 .wrapper .content section.right {
   height: 200px;
   width: 30vw;
-  border: 1px solid black;
 }
 /*# sourceMappingURL=index.css.map */
