@@ -236,7 +236,7 @@ body {
   margin-top: 10px;
 }
 
-.wrapper .content section.left .userNav .news {
+.wrapper .content section.left .userNav .buttonPlace {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -249,12 +249,19 @@ body {
   font-size: .8rem;
 }
 
-.wrapper .content section.left .userNav .news .iconLeft {
-  font-size: 1.2rem;
-  color: #4267b2;
+.wrapper .content section.left .userNav .buttonPlace .txt {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
-.wrapper .content section.left .userNav .news .fa-ellipsis-h {
+.wrapper .content section.left .userNav .buttonPlace .iconLeft {
+  font-size: 1.2rem;
+  color: #4267b2;
+  width: 35px;
+}
+
+.wrapper .content section.left .userNav .buttonPlace .fa-ellipsis-h {
   margin-right: 10px;
   font-size: 1rem;
   text-align: right;
@@ -263,22 +270,22 @@ body {
   opacity: 1;
 }
 
-.wrapper .content section.left .userNav .news .fa-home {
+.wrapper .content section.left .userNav .buttonPlace .fa-home {
   color: #2b7945;
 }
 
-.wrapper .content section.left .userNav .news .fa-circle {
+.wrapper .content section.left .userNav .buttonPlace .fa-circle {
   font-size: .5rem;
   color: #f32f2f;
   margin-right: 10px;
 }
 
-.wrapper .content section.left .news:hover {
+.wrapper .content section.left .buttonPlace:hover {
   cursor: pointer;
   background-color: #f5f6f7;
 }
 
-.wrapper .content section.left .shortCut .short {
+.wrapper .content section.left .shortCut .short, .wrapper .content section.left .export .short {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -292,24 +299,24 @@ body {
   margin: 0 15px -10px 5px;
 }
 
-.wrapper .content section.left .shortCut .short .one {
+.wrapper .content section.left .shortCut .short .one, .wrapper .content section.left .export .short .one {
   font-size: .9rem;
   color: #666666;
   font-weight: bold;
 }
 
-.wrapper .content section.left .shortCut .short .two {
+.wrapper .content section.left .shortCut .short .two, .wrapper .content section.left .export .short .two {
   font-size: .9rem;
   color: #2b2bb8;
   opacity: 0;
 }
 
-.wrapper .content section.left .shortCut .short .two:hover {
+.wrapper .content section.left .shortCut .short .two:hover, .wrapper .content section.left .export .short .two:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
-.wrapper .content section.left .shortCut .news {
+.wrapper .content section.left .shortCut .buttonPlace, .wrapper .content section.left .export .buttonPlace {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -322,12 +329,19 @@ body {
   font-size: .8rem;
 }
 
-.wrapper .content section.left .shortCut .news .iconLeft {
-  font-size: 1.2rem;
-  color: #4267b2;
+.wrapper .content section.left .shortCut .buttonPlace .txt, .wrapper .content section.left .export .buttonPlace .txt {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
-.wrapper .content section.left .shortCut .news .fa-ellipsis-h {
+.wrapper .content section.left .shortCut .buttonPlace .iconLeft, .wrapper .content section.left .export .buttonPlace .iconLeft {
+  font-size: 1.2rem;
+  color: #4267b2;
+  width: 35px;
+}
+
+.wrapper .content section.left .shortCut .buttonPlace .fa-ellipsis-h, .wrapper .content section.left .export .buttonPlace .fa-ellipsis-h {
   margin-right: 10px;
   font-size: 1rem;
   text-align: right;
@@ -337,16 +351,16 @@ body {
   opacity: 0;
 }
 
-.wrapper .content section.left .shortCut .news .fa-flag {
+.wrapper .content section.left .shortCut .buttonPlace .fa-flag, .wrapper .content section.left .export .buttonPlace .fa-flag {
   color: #e4881f;
 }
 
-.wrapper .content section.left .shortCut .news:hover {
+.wrapper .content section.left .shortCut .buttonPlace:hover, .wrapper .content section.left .export .buttonPlace:hover {
   cursor: pointer;
   background-color: #f5f6f7;
 }
 
-.wrapper .content section.left .shortCut .news:hover .fa-ellipsis-h {
+.wrapper .content section.left .shortCut .buttonPlace:hover .fa-ellipsis-h, .wrapper .content section.left .export .buttonPlace:hover .fa-ellipsis-h {
   opacity: 1;
 }
 

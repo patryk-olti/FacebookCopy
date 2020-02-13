@@ -29,7 +29,22 @@ body{
 
 @mixin iconLeft {
     font-size: 1.2rem;
-    color: $lightBlue
+    color: $lightBlue;
+    width: 35px;
+}
+
+@mixin buttonPlace {
+    display: flex;
+    width: 100%;
+    margin-top: 1px;
+    padding: 5px;
+    align-items: center;
+    font-size: .8rem;
+}
+
+@mixin buttonPlaceHover {
+    cursor: pointer;
+    background-color: $lightBg;
 }
 
 .wrapper{
@@ -197,13 +212,10 @@ body{
                 flex-wrap: wrap;
                 margin-top: 10px;
 
-                .news{
-                    display: flex;
-                    width: 100%;
-                    margin-top: 1px;
-                    padding: 5px;
-                    align-items: center;
-                    font-size: .8rem;
+                .buttonPlace{
+                    @include buttonPlace;
+
+                    .txt{flex-grow: 1;}
 
                     .iconLeft{@include iconLeft;}
     
@@ -219,12 +231,11 @@ body{
                 }
             }
 
-            .news:hover{
-                cursor: pointer;
-                background-color: $lightBg;
+            .buttonPlace:hover{
+                @include buttonPlaceHover;
             }
 
-            .shortCut{
+            .shortCut, .export{
                 .short{
                     display: flex;
                     flex-direction: row;
@@ -248,16 +259,11 @@ body{
                     }
                 }
 
-                .news{
-                    display: flex;
-                    width: 100%;
-                    margin-top: 1px;
-                    padding: 5px;
-                    align-items: center;
-                    font-size: .8rem;
+                .buttonPlace{
+                    @include buttonPlace;
 
+                    .txt{flex-grow: 1;}
                     .iconLeft{ @include iconLeft; }
-    
                     .fa-ellipsis-h{
                         @include dotsLeft;
                         opacity: 0;
@@ -266,11 +272,11 @@ body{
                     .fa-flag{color: #e4881f;}
                 }
 
-                .news:hover{
+                .buttonPlace:hover{
                     cursor: pointer;
                     background-color: $lightBg;}
 
-                .news:hover .fa-ellipsis-h{opacity: 1;}
+                .buttonPlace:hover .fa-ellipsis-h{opacity: 1;}
             }
 
             .shortCut:hover .two{opacity: 1;}
@@ -298,6 +304,7 @@ body{
             .more:hover{cursor: pointer;}
         }
 
+        //** END OF LEFT SECTION **/
 
 
         section.center{
@@ -314,7 +321,3 @@ body{
     }
 
 }
-
-
-
-
