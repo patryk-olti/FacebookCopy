@@ -18,12 +18,25 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+@mixin dotsLeft {
+    margin-right: 10px;
+    font-size: 1rem;
+    text-align: right;
+    line-height: 25px;
+    color: #888;
+    opacity: 1;
+}
+
+@mixin iconLeft {
+    font-size: 1.2rem;
+    color: $lightBlue
+}
+
 .wrapper{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
     
     nav{
         display: flex;
@@ -139,39 +152,34 @@ body{
         display: flex;
         justify-content: space-around;
         max-width: 1080px;
-        transform: translateX(-9%);
         margin-top: 20px;
+        transform: translateX(-9%);
 
         section.left{
             width: 20vw;
             margin-right: 10px;
             .user{
-                padding: 5px;
                 display: flex;
                 height: 35px;
+                padding: 5px;
                 border-radius: 10%;
-
                 .img{
                     width: 20px;
                     height: 20px;
+                    margin-top: 2.5px;
                     background-image: url("../img/patrick.jpg");
                     background-size: cover;
                     border-radius: 50%;
-                    margin-top: 2.5px;
                 }
 
                 .span{
+                    margin: 0 60px 0 10px;
                     font-size: 0.9rem;
                     line-height: 25px;
-                    margin-left: 10px;
-                    margin-right: 60px;
                 }
 
                 .fas{
-                    font-size: 1rem;
-                    text-align: right;
-                    line-height: 25px;
-                    color: #888;
+                    @include dotsLeft;
                     opacity: 0;
                 }
             }
@@ -180,9 +188,8 @@ body{
                 cursor: pointer;
                 background-color: $lightBg;
             }
-            .user:hover .fas{
-                opacity: 1;
-            }
+            
+            .user:hover .fas{opacity: 1;}
 
             .userNav{
                 display: flex;
@@ -192,29 +199,17 @@ body{
 
                 .news{
                     display: flex;
-                    align-items: center;
-                    font-size: .8rem;
-                    padding: 5px;
                     width: 100%;
                     margin-top: 1px;
+                    padding: 5px;
+                    align-items: center;
+                    font-size: .8rem;
 
-                    .fas, .fab{
-                        font-size: 1.2rem;
-                        color: $lightBlue
-                    }
+                    .iconLeft{@include iconLeft;}
     
-                    .fa-ellipsis-h{
-                        font-size: 1rem;
-                        text-align: right;
-                        line-height: 25px;
-                        margin-right: 10px;
-                        color: #888;
-                        opacity: 1;
-                    }
+                    .fa-ellipsis-h{@include dotsLeft;}
 
-                    .fa-home{
-                        color: #2b7945;
-                    }
+                    .fa-home{color: #2b7945;}
 
                     .fa-circle{
                         font-size: .5rem;
@@ -232,6 +227,7 @@ body{
             .shortCut{
                 .short{
                     display: flex;
+                    flex-direction: row;
                     justify-content: space-between;
                     margin: 0 15px -10px 5px;
                     .one{
@@ -254,29 +250,20 @@ body{
 
                 .news{
                     display: flex;
-                    align-items: center;
-                    font-size: .8rem;
-                    padding: 5px;
                     width: 100%;
                     margin-top: 1px;
+                    padding: 5px;
+                    align-items: center;
+                    font-size: .8rem;
 
-                    .fas, .fab{
-                        font-size: 1.2rem;
-                        color: $lightBlue
-                    }
+                    .iconLeft{ @include iconLeft; }
     
                     .fa-ellipsis-h{
-                        font-size: 1rem;
-                        text-align: right;
-                        line-height: 25px;
-                        margin-right: 10px;
-                        color: #888;
+                        @include dotsLeft;
                         opacity: 0;
                     }
 
-                    .fa-flag{
-                        color: #e4881f;
-                    }
+                    .fa-flag{color: #e4881f;}
                 }
 
                 .news:hover{
@@ -306,9 +293,7 @@ body{
                 }
             }
 
-            .more:hover p{
-                text-decoration: underline;
-            }
+            .more:hover p{text-decoration: underline;}
 
             .more:hover{cursor: pointer;}
         }
