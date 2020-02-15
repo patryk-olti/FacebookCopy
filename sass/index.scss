@@ -15,6 +15,7 @@ body{
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    width: 100%;
     background-color: $darkBg;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -55,10 +56,12 @@ body{
     justify-content: center;
     
     nav{
+        position: fixed;
         display: flex;
         justify-content: center;
         width: 100%;
         background-color: $lightBlue;
+        z-index: 9999;
         .nav{
             display: flex;
             justify-content: space-around;
@@ -165,14 +168,15 @@ body{
     /** END OF NAV SECTION **/
 
     .content{
-        display: flex;
-        justify-content: space-around;
-        max-width: 1080px;
-        margin-top: 20px;
+        width: 1080px;
+        margin-top: 50px;
         transform: translateX(-9%);
 
         section.left{
-            width: 20vw;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 220px;
             margin-right: 10px;
             .user{
                 display: flex;
@@ -311,7 +315,8 @@ body{
         section.center{
             
             height: 100vh;
-            width: 50vw;
+            width: 580px;
+            margin-left: 230px;
             //border: 1px solid black;
 
             .whatsUp{
@@ -655,7 +660,7 @@ body{
         section.right{
             height: 200px;
             width: 30vw;
-            //border: 1px solid black;
+            border: 1px solid black;
         }
     }
 
